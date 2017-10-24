@@ -1,0 +1,9 @@
+@import "colors";
+
+%panel {
+
+	padding: 1rem 1rem 1rem 1rem;
+
+	background-color: lighten($backgroundColor, 10%);
+
+}

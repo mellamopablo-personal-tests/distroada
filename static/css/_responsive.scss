@@ -1,0 +1,28 @@
+@import "constants";
+
+@mixin responsiveTo($media) {
+
+	@if $media == mobile {
+
+		@media only screen and (max-width: $mobileMaxWidth) {
+			@content;
+		}
+
+	} @else if $media == tablet {
+
+		@media only screen
+		and (min-width: $mobileMaxWidth + 1)
+		and (max-width: $tabletMaxWidth) {
+
+			@content;
+		}
+
+	} @else if $media == desktop {
+
+		@media only screen and (min-width: $tabletMaxWidth + 1) {
+			@content;
+		}
+
+	}
+
+}

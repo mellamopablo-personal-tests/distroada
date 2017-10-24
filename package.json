@@ -1,0 +1,14 @@
+{
+	"name": "distroada",
+	"version": "1.0.0",
+	"description": "Proyecto de distribuciones de Linux basado en DistroWatch",
+	"scripts": {
+		"build": "node-sass-chokidar ./static/css/ -o ./static/css --include-path ./static/css/",
+		"watch": "node-sass-chokidar ./static/css/ -o ./static/css --include-path ./static/css/ --watch"
+	},
+	"author": "Pablo Rodríguez",
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"node-sass-chokidar": "0.0.3"
+	}
+}

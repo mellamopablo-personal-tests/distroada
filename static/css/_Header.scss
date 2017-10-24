@@ -1,0 +1,23 @@
+@import "colors";
+@import "constants";
+
+.Header {
+
+	height: $headerHeight;
+	background-color: $mainColorDark;
+
+	padding: 0 1rem 0 1rem;
+	margin-bottom: 1rem;
+
+	display: flex;
+
+	align-items: center;
+
+	.logo {
+
+		font-size: 2.5em;
+		font-weight: bold;
+
+	}
+
+}

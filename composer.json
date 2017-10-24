@@ -1,0 +1,15 @@
+{
+    "name": "pablo/distroada",
+    "description": "Proyecto de distribuciones de Linux basado en DistroWatch",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pablo Rodríguez",
+            "email": "pabloviolin8@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
