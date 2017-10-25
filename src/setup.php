@@ -21,6 +21,7 @@ $dotenv->required(
 
 require_once "db.php";
 require_once "model/Distro.php";
+require_once "model/DistroSummary.php";
 
 $page = array();
 

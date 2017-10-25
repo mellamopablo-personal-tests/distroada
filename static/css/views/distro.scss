@@ -1,0 +1,9 @@
+@import "support";
+@import "colors";
+@import "responsive";
+
+.distroPanel {
+
+	@extend %panel;
+
+}

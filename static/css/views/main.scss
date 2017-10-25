@@ -1,7 +1,54 @@
 @import "support";
+@import "colors";
+@import "responsive";
 
 .distroPanel {
 
 	@extend %panel;
+
+	.distroList {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include responsiveTo(mobile) {
+
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: inherit;
+
+		}
+
+		.distro {
+
+			@extend %removeLinkStyle;
+
+			$distroColor: lighten($panelColor, 10%);
+
+			margin-top: 0.5rem;
+			padding: 1rem 1rem 1rem 1rem;
+
+			background-color: $distroColor;
+
+			display: flex;
+
+			&:hover {
+
+				background-color: lighten($distroColor, 10%);
+
+			}
+
+			.name {
+
+				font-size: 2.5em;
+				margin-left: 0.5rem;
+
+			}
+
+		}
+
+	}
 
 }

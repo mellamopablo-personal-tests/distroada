@@ -1,12 +1,12 @@
 <?php
 
-class Distro {
+class DistroSummary {
 
 	public $id;
     public $name;
 
     /**
-     * Instantiates a Distro
+     * Instantiates a DistroSummary
      * @param $id int The id of the Distro
      * @param $name string The name of the Distro
      */

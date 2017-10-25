@@ -9,7 +9,7 @@ try {
 	$user = $_ENV["DB_USERNAME"];
 	$pass = $_ENV["DB_PASSWORD"];
 
-	$pdo = new PDO(
+	$db = new PDO(
 		"$engine:host=$host;port=$port;dbname=$database",
 		$user,
 		$pass
