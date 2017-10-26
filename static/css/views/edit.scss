@@ -1,0 +1,15 @@
+@import "support";
+@import "colors";
+
+.distroPanel {
+
+	@extend %panel;
+
+	.distroForm {
+
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+
+	}
+
+}

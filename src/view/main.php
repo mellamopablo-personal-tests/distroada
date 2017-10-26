@@ -34,6 +34,20 @@ require_once CONTROLLERS . "main.php";
 
 	</div>
 
+	<div class="actions">
+
+		<h3 class="subTitle">Actions</h3>
+
+		<div class="actionList">
+
+			<a
+				class="actionButton"
+				href="new.php">Nueva distro</a>
+
+		</div>
+
+	</div>
+
 </div>
 
 </body>

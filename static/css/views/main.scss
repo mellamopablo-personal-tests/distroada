@@ -1,6 +1,5 @@
 @import "support";
 @import "colors";
-@import "responsive";
 
 .distroPanel {
 
@@ -8,18 +7,7 @@
 
 	.distroList {
 
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		@include responsiveTo(mobile) {
-
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: inherit;
-
-		}
+		@extend %responsiveWrappingHorizontalFlexBox;
 
 		.distro {
 
@@ -46,6 +34,19 @@
 				margin-left: 0.5rem;
 
 			}
+
+		}
+
+	}
+
+	.actions {
+
+		margin-top: 0.5rem;
+
+		.actionList {
+
+			display: flex;
+			flex-direction: column;
 
 		}
 

@@ -1,4 +1,5 @@
 @import "colors";
+@import "responsive";
 
 %panel {
 
@@ -12,5 +13,22 @@
 
 	color: inherit;
 	text-decoration: inherit;
+
+}
+
+%responsiveWrappingHorizontalFlexBox {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include responsiveTo(mobile) {
+
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: inherit;
+
+	}
 
 }

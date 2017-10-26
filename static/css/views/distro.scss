@@ -1,9 +1,39 @@
 @import "support";
 @import "colors";
-@import "responsive";
 
 .distroPanel {
 
 	@extend %panel;
+
+	.distroInfo {
+
+		@extend %responsiveWrappingHorizontalFlexBox;
+
+		justify-content: flex-start;
+
+		.pair {
+
+			margin-top: 0.5rem;
+			margin-right: 0.5rem;
+			padding: 1rem 1rem 1rem 1rem;
+
+			background-color: lighten($panelColor, 10%);
+
+		}
+
+	}
+
+	.actions {
+
+		margin-top: 0.5rem;
+
+		.actionList {
+
+			display: flex;
+			flex-direction: column;
+
+		}
+
+	}
 
 }

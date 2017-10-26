@@ -1,5 +1,6 @@
 @import "colors";
 @import "constants";
+@import "support";
 
 .Header {
 
@@ -17,6 +18,12 @@
 
 		font-size: 2.5em;
 		font-weight: bold;
+
+		a {
+
+			@extend %removeLinkStyle;
+
+		}
 
 	}
 

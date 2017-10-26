@@ -1,3 +1,21 @@
+/*
+
+// Extracted with:
+
+(table => {
+
+    const trs = Array.from(table.querySelectorAll("tr.Background"))
+	const rows = trs.map(tr => ({
+        key: tr.children[0].textContent,
+        value: tr.children[1].textContent
+    }))
+
+	copy(JSON.stringify(rows))
+
+})(document.querySelector("table.Info"))
+
+*/
+
 const RAW_INFO = [
     {
         "distro": "Debian",
@@ -59,60 +77,58 @@ const RAW_INFO = [
     {
         "distro": "Mageia",
         "info": [
-            [
-                {
-                    "key": "Distribution",
-                    "value": "Mageia"
-                },
-                {
-                    "key": "Home Page",
-                    "value": "http://www.mageia.org/"
-                },
-                {
-                    "key": "Mailing Lists",
-                    "value": "https://www.mageia.org/mailman/"
-                },
-                {
-                    "key": "User Forums",
-                    "value": "https://forums.mageia.org/"
-                },
-                {
-                    "key": "Alternative User Forums",
-                    "value": "LinuxQuestions.org"
-                },
-                {
-                    "key": "Documentation",
-                    "value": "https://wiki.mageia.org/"
-                },
-                {
-                    "key": "Screenshots",
-                    "value": "DistroWatch Gallery"
-                },
-                {
-                    "key": "Screencasts",
-                    "value": ""
-                },
-                {
-                    "key": "Download Mirrors",
-                    "value": "\n      http://mageia.org/en/downloads/\n      http://mirrors.mageia.org/\n    "
-                },
-                {
-                    "key": "Bug Tracker",
-                    "value": "http://bugs.mageia.org/"
-                },
-                {
-                    "key": "Related Websites",
-                    "value": "\n      Mageia Planet •\n      Wikipedia •\n      Mageia Brazil •\n      Mageia China •\n      Mageia Czech Republic •\n      Mageia France •\n      Mageia Greece •\n      Mageia Italy •\n      Mageia Russia •\n      Mageia Thailand •\n      Mageia Turkey\n    "
-                },
-                {
-                    "key": "Reviews",
-                    "value": "\n    6: DistroWatch •\n       DarkDuck\n    5: DistroWatch •\n       Everyday Linux User •\n       ABCLinuxu (Czech) •\n    FOSS Force\n    4: Linux Review (Farsi) •\n    DistroWatch • \n    LinuxBSDos •\n    Blogspot •\n    ABC Linuxu (Czech) •\n    ZDNet •\n    Linux User\n    3: Desktop Linux Reviews •\n    Everyday Linux User •\n    ZDNet •\n    DistroWatch •\n    The Inquirer •\n    Blogspot\n    2: AbcLinuxu (Czech) •\n    Populyarno (Russian) •\n    ABC Linuxu (Czech) •\n    Linux Za Sve (Croatian) •\n    DarkDuck •\n    DistroWatch •\n    LinuxBSDos •\n    Linux User •\n    Wordpress\n    1: Wordpress •\n    Linux Review (Farsi) •\n    Linux is my life •\n    DarkDuck •\n    DistroWatch •\n    LinuxBSDos •\n    The Inquirer •\n    ZDNet Blogs\n    "
-                },
-                {
-                    "key": "Where To Buy",
-                    "value": "OSDisc.com (sponsored link)"
-                }
-            ]
+            {
+                "key": "Distribution",
+                "value": "Mageia"
+            },
+            {
+                "key": "Home Page",
+                "value": "http://www.mageia.org/"
+            },
+            {
+                "key": "Mailing Lists",
+                "value": "https://www.mageia.org/mailman/"
+            },
+            {
+                "key": "User Forums",
+                "value": "https://forums.mageia.org/"
+            },
+            {
+                "key": "Alternative User Forums",
+                "value": "LinuxQuestions.org"
+            },
+            {
+                "key": "Documentation",
+                "value": "https://wiki.mageia.org/"
+            },
+            {
+                "key": "Screenshots",
+                "value": "DistroWatch Gallery"
+            },
+            {
+                "key": "Screencasts",
+                "value": ""
+            },
+            {
+                "key": "Download Mirrors",
+                "value": "\n      http://mageia.org/en/downloads/\n      http://mirrors.mageia.org/\n    "
+            },
+            {
+                "key": "Bug Tracker",
+                "value": "http://bugs.mageia.org/"
+            },
+            {
+                "key": "Related Websites",
+                "value": "\n      Mageia Planet •\n      Wikipedia •\n      Mageia Brazil •\n      Mageia China •\n      Mageia Czech Republic •\n      Mageia France •\n      Mageia Greece •\n      Mageia Italy •\n      Mageia Russia •\n      Mageia Thailand •\n      Mageia Turkey\n    "
+            },
+            {
+                "key": "Reviews",
+                "value": "\n    6: DistroWatch •\n       DarkDuck\n    5: DistroWatch •\n       Everyday Linux User •\n       ABCLinuxu (Czech) •\n    FOSS Force\n    4: Linux Review (Farsi) •\n    DistroWatch • \n    LinuxBSDos •\n    Blogspot •\n    ABC Linuxu (Czech) •\n    ZDNet •\n    Linux User\n    3: Desktop Linux Reviews •\n    Everyday Linux User •\n    ZDNet •\n    DistroWatch •\n    The Inquirer •\n    Blogspot\n    2: AbcLinuxu (Czech) •\n    Populyarno (Russian) •\n    ABC Linuxu (Czech) •\n    Linux Za Sve (Croatian) •\n    DarkDuck •\n    DistroWatch •\n    LinuxBSDos •\n    Linux User •\n    Wordpress\n    1: Wordpress •\n    Linux Review (Farsi) •\n    Linux is my life •\n    DarkDuck •\n    DistroWatch •\n    LinuxBSDos •\n    The Inquirer •\n    ZDNet Blogs\n    "
+            },
+            {
+                "key": "Where To Buy",
+                "value": "OSDisc.com (sponsored link)"
+            }
         ]
     },
     {
@@ -132,7 +148,7 @@ const RAW_INFO = [
             },
             {
                 "key": "User Forums",
-                "value": "Fedora Forum"
+                "value": "https://forums.fedoraforum.org/"
             },
             {
                 "key": "Alternative User Forums",
@@ -515,3 +531,20 @@ const RAW_INFO = [
         ]
     }
 ];
+
+const statements = RAW_INFO
+    .map(e => {
+
+        const find = key => {
+            const obj = e.info.find(pair => pair.key === key);
+            return obj
+                ? (obj.value === "--" ? null : `'${obj.value}'`)
+                : null
+        };
+
+        return `('${e.distro}', ${find("Home Page")}, ${find("Mailing Lists")}, ${find("User Forums")}, ${find("Bug Tracker")})`
+
+    })
+    .map(s => `INSERT INTO distros (name, home_url, mailing_lists_url, user_forums_url, bug_tracker_url) VALUES ${s};`);
+
+console.log(statements.join('\n'));
